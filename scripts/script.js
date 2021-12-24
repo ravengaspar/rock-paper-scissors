@@ -31,13 +31,14 @@ playRound = (playerSelection, computerSelection) => {
 
 }
 
-const playerSelection = window.prompt('Please pick from rock, paper, or scissors').toLowerCase()
 
 game = (numberOfRounds) => {
-
+ 
+ 
 for (let i = 0; i < numberOfRounds; i++) {
-    const computerSelection = computerPlay()
-    console.log(playRound(playerSelection, computerSelection))
+    let playerSelection = window.prompt('Please pick from rock, paper, or scissors').toLowerCase()
+    let computerSelection = computerPlay()
+   playRound(playerSelection, computerSelection)
 } 
 let result = `Win: ${win}. Lost: ${lose}. Tied Game: ${tie}`
 console.log(result)
