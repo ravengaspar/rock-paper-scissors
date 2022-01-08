@@ -16,7 +16,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 85vh;
+    height: 100vh;
     overflow: hidden;
     margin: 0;
 }
@@ -30,7 +30,7 @@ body {
     justify-content: space-between;
     position: relative;
     margin-bottom: 1rem;
-    margin-top: 1.875rem;
+    margin-top: 1.4rem;
     max-width: 100%;
     width: 35.875rem;
 }
@@ -44,8 +44,7 @@ body {
     transform: translateY(-50%);
     height: 4px;
     width: 100%;
-    z-index: -1;
-    
+    z-index: -1;  
 }
 
 .progress {
@@ -101,13 +100,15 @@ body {
     display: inline-block;
     height: 10rem;
     width: 8.875rem;
-    margin-top: 10px;
 }
 
-.btn.reset span{
+.btn.reset {
+    margin-top: 3rem;
     border:none;
-    height: 7rem;
-    margin: 7.5rem 0 0 1rem;
+}
+
+.rps-container {
+    margin-top: 4rem;
 }
 
 .btn:hover{
@@ -125,19 +126,23 @@ body {
 
 #computer-selection-image {
     cursor: not-allowed;
-    display: inline-block;
     height: 10rem;
     width: 8.875rem;
     margin-top: 2rem;
 }
 
 
-.container-computer {
-    margin: 4rem;
+.btn.reset {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 button {
     border: none;
-    margin: 1rem;
     background-color: #fff;
+}
+
+.score{
+    display: inline-flex;
+    font-size: 1.875rem;
 }

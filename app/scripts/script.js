@@ -1,5 +1,9 @@
 const progress = document.getElementById('progress')
 const circles = document.querySelectorAll('.circle')
+const winElement = document.querySelector('.winEl')
+const loseElement = document.querySelector('loseEl')
+const tieElement = document.querySelector('tieEl')
+const scoreElement = document.querySelector('.score')
 
 update = () => {
   let currentActive = 1 + total.win + total.lose + total.tie
@@ -25,6 +29,14 @@ update = () => {
   const actives = document.querySelectorAll('.active')
   progress.style.width =
     ((actives.length - 1) / (circles.length - 1)) * 100 + '%'
-}
 
-const status = document.querySelectorAll('.active')
+  let winTotal = `Win: ${total.win} `
+  let loseTotal = `Lose: ${total.lose} `
+  let tieTotal = `Tie: ${total.tie} `
+
+  scoreElement.innerHTML = ''
+
+  scoreElement.append(winTotal)
+  scoreElement.append(loseTotal)
+  scoreElement.append(tieTotal)
+}

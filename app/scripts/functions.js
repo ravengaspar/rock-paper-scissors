@@ -39,11 +39,11 @@ game = () => {
       let computerSelection = computerPlay()
 
       if (computerSelection === 'rock') {
-        img.src = 'img/fist.png'
+        img.src = '/img/fist.png'
       } else if (computerSelection === 'paper') {
-        img.src = 'img/hand.png'
+        img.src = '/img/hand.png'
       } else if (computerSelection === 'scissors') {
-        img.src = 'img/scissors.png'
+        img.src = '/img/peace-symbol.png'
       }
 
       console.log(playerSelection, computerSelection)
@@ -53,6 +53,25 @@ game = () => {
         win: round.filter((win) => win === 'win').length,
         lose: round.filter((lose) => lose === 'lose').length,
         tie: round.filter((tie) => tie === 'tie').length,
+      }
+
+      if (round.length == 5) {
+        if (total.win > total.lose) {
+          setTimeout(() => {
+            img.src = '/img/trophy.png'
+          }, 1000)
+        } else if (total.lose > total.win) {
+          setTimeout(() => {
+            img.src = '/img/loser.png'
+          }, 1000)
+        } else if (
+          (total.tie > total.win && total.tie > total.lose) ||
+          total.win == total.lose
+        ) {
+          setTimeout(() => {
+            img.src = '/img/equal.png'
+          }, 1000)
+        }
       }
 
       let results = `Win: ${total.win}. Lost: ${total.lose}. Tied Game: ${total.tie}`
