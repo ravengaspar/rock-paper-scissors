@@ -2,7 +2,7 @@ const optionsArr = ['rock', 'paper', 'scissors']
 
 const buttons = document.querySelectorAll('[data-key]')
 const reset = document.querySelector('.reset')
-
+const gameResult = document.querySelector('.result')
 let round = []
 let total
 
@@ -60,10 +60,12 @@ game = () => {
       if (round.length == 5) {
         if (total.win > total.lose) {
           setTimeout(() => {
+            gameResult.innerHTML = `Congratulations! You are a Winner!`
             img.src = 'img/trophy.png'
           }, 1000)
         } else if (total.lose > total.win) {
           setTimeout(() => {
+            gameResult.innerHTML = `What a Loser`
             img.src = 'img/loser.png'
           }, 1000)
         } else if (
@@ -71,6 +73,7 @@ game = () => {
           total.win == total.lose
         ) {
           setTimeout(() => {
+            gameResult.innerHTML = `Tied!`
             img.src = 'img/equal.png'
           }, 1000)
         }
