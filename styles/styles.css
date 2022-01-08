@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+    --line-border-fill: #3498db;
+    --line-border-empty: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 1rem;
+    margin-top: 1.875rem;
+    max-width: 100%;
+    width: 35.875rem;
+}
+
+.progress-container::before {
+    content: '';
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+    
+}
+
+.progress {
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: .4s ease;
+}
+
+.circle {
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+    transition: .4s ease;
+}
+
+.circle img{
+    width: 16px;
+    height: 16px;
+}
+
+.circle.active {
+    border-color: var(--line-border-fill);
+}
+
+.circle.win, .progress.win {
+    background-color: green;
+}
+.circle.lose, .progress.lose {
+    background-color: red;
+}
+.circle.tie, .progress.tie {
+    background-color: orange;
+}
+
+
+.rock, .paper, .scissors, .computer-selection,.btn.reset span{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 10rem;
+    width: 8.875rem;
+    margin-top: 10px;
+}
+
+.btn.reset span{
+    border:none;
+    height: 7rem;
+    margin: 7.5rem 0 0 1rem;
+}
+
+.btn:hover{
+    transition: 0.2s;
+    transform: scale(1.125);
+    filter: saturate(7)
+}
+
+
+.container h2 {
+    justify-content: center;
+    align-items: center;
+}
+
+
+#computer-selection-image {
+    cursor: not-allowed;
+    display: inline-block;
+    height: 10rem;
+    width: 8.875rem;
+    margin-top: 2rem;
+}
+
+
+.container-computer {
+    margin: 4rem;
+}
+
+button {
+    border: none;
+    margin: 1rem;
+    background-color: #fff;
+}

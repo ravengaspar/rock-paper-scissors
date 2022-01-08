@@ -1,12 +1,63 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <title>Rock Paper Scissors</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-computer">
+        <h1>Computer Selection:</h1>
+        <span>
+          <img
+            class="computer-selection"
+            id="computer-selection-image"
+            src="img/rock-paper-scissors.png"
+            alt=""
+          />
+        </span>
+      </div>
 
-    <script src="scripts/script.js"></script>
-</body>
+      <h1>Scoreboard</h1>
+      <div class="progress-container">
+        <div class="progress" id="progress"></div>
+        <div class="circle">1</div>
+        <div class="circle">2</div>
+        <div class="circle">3</div>
+        <div class="circle">4</div>
+        <div class="circle">5</div>
+      </div>
+
+      <div class="rps-container">
+        <button class="btn" data-key="rock">
+          <span class="rock" style="background-image: url('img/fist.png')">
+          </span>
+        </button>
+        <button class="btn" data-key="paper">
+          <span class="paper" style="background-image: url('img/hand.png')">
+          </span>
+        </button>
+        <button class="btn" data-key="scissors">
+          <span
+            class="scissors"
+            style="background-image: url('img/scissors.png')"
+          >
+          </span>
+        </button>
+        <h1>Choose your Weapon</h1>
+      </div>
+
+      <div class="container">
+        <button class="btn reset">
+          <span class="reset" style="background-image: url('img/refresh.png')">
+          </span>
+        </button>
+        <h2>Restart Game</h2>
+      </div>
+    </div>
+    <script src="app/scripts/functions.js"></script>
+    <script src="app/scripts/script.js"></script>
+  </body>
 </html>
