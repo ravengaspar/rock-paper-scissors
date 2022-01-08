@@ -16,13 +16,13 @@ update = () => {
 
     if (round[idx] === 'win') {
       circle.classList.add('win')
-      circle.innerHTML = "<img src='/img/check.png'>"
+      circle.innerHTML = "<img src='img/check.png'>"
     } else if (round[idx] === 'lose') {
       circle.classList.add('lose')
-      circle.innerHTML = "<img src='/img/cross.png'>"
+      circle.innerHTML = "<img src='img/cross.png'>"
     } else if (round[idx] === 'tie') {
       circle.classList.add('tie')
-      circle.innerHTML = "<img src='/img/equal.png'>"
+      circle.innerHTML = "<img src='img/equal.png'>"
     }
   })
 
